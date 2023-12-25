@@ -1,0 +1,25 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+// body {}
+
+// a: :any-link{}
+
+// a:focus, a:active {}
+
+ul {
+  list-style-type: none;
+}
+
+h1 {
+  color: red;
+}
