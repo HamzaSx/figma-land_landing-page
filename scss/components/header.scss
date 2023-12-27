@@ -1,0 +1,142 @@
+@use "../abstracts" as *;
+
+.header {
+  padding: rem(25) rem(34);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include breakpoints(lg) {
+    padding: rem(30) rem(66);
+  }
+
+  @include breakpoints(xxl) {
+    padding: rem(30) rem(281);
+  }
+
+  &__logo {
+    width: rem(186);
+    height: rem(58);
+    cursor: pointer;
+    margin-bottom: rem(10);
+  }
+
+  &__btn-log {
+    padding: rem(13.5) rem(46);
+    border: 1px solid var(--bg-light);
+    color: var(--text-light);
+
+    &:hover {
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+    }
+  }
+
+  div {
+    display: flex;
+    gap: rem(16);
+    min-width: 196px;
+    width: 38vw;
+    justify-content: space-between;
+
+    @include breakpoints(md) {
+      display: block;
+      min-width: fit-content;
+      width: auto;
+    }
+  }
+
+  &__menu {
+    height: auto;
+    width: auto;
+
+    @include breakpoints(md) {
+      display: none;
+    }
+  }
+
+  &__menu-img {
+    width: rem(44);
+    height: rem(27);
+  }
+
+  &__nav-mb {
+    position: absolute;
+    top: rem(90);
+    right: rem(34);
+    height: fit-content;
+    text-align: center;
+    background-color: var(--bg-dark);
+    border: 1px solid var(--bg-light);
+    border-radius: rem(15);
+    transform: translateY(10%);
+    transition: all ease-in-out 500ms;
+    opacity: 0;
+    visibility: hidden;
+
+    @include breakpoints(md) {
+      display: none;
+    }
+
+    li {
+      border-bottom: 1px solid var(--bg-light);
+
+      &:last-child {
+        border-bottom: none;
+        border-bottom-left-radius: rem(15);
+        border-bottom-right-radius: rem(15);
+      }
+
+      &:first-child {
+        border-top-left-radius: rem(15);
+        border-top-right-radius: rem(15);
+      }
+
+      a {
+        padding: rem(15) rem(75);
+      }
+
+      &:hover {
+        background-color: var(--bg-light);
+
+        a {
+          color: var(--text-dark);
+        }
+      }
+    }
+  }
+
+  .open {
+    transform: translateY(0%);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__nav {
+    display: none;
+    flex-grow: 0.2;
+
+    ul {
+      display: flex;
+      gap: rem(15);
+
+      @include breakpoints(md) {
+        display: block;
+      }
+
+      a,
+      :any-link {
+        padding: rem(10);
+
+        &:hover {
+          background-color: var(--bg-light);
+          color: var(--text-dark);
+        }
+      }
+
+      @include breakpoints(lg) {
+        gap: rem(31);
+      }
+    }
+  }
+}

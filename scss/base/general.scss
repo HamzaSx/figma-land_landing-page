@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 html {
   box-sizing: border-box;
 }
@@ -10,9 +12,19 @@ html {
   padding: 0;
 }
 
-// body {}
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
 
-// a: :any-link{}
+a,
+:any-link {
+  display: block;
+  width: 100%;
+  height: fit-content;
+  text-decoration: none;
+  color: var(--text-light);
+}
 
 // a:focus, a:active {}
 
@@ -20,6 +32,8 @@ ul {
   list-style-type: none;
 }
 
-h1 {
-  color: red;
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }

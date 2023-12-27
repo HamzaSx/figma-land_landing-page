@@ -1,0 +1,38 @@
+@use "../abstracts" as *;
+
+// h1, h2, h3 {}
+
+h1 {
+  font-size: rem(80);
+  line-height: rem(88);
+}
+
+h2 {
+  font-size: rem(52);
+  line-height: rem(62);
+}
+
+h3 {
+  font-size: rem(20);
+  line-height: rem(30);
+}
+
+h4 {
+  font-size: rem(20);
+  line-height: rem(30);
+}
+
+button {
+  font-size: rem(17);
+  line-height: rem(25);
+}
+
+p {
+  font-size: rem(16);
+  line-height: rem(24);
+}
+
+a {
+  font-size: rem(16);
+  line-height: rem(24);
+}
