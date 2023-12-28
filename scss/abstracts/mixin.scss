@@ -1,0 +1,21 @@
+@use "./functions" as *;
+@use "./breakpoints" as *;
+
+@mixin Padding($x: 1) {
+  padding: 0 rem(34);
+
+  @include breakpoints(lg) {
+    @if ($x == 0) {
+      padding: 0 rem(66);
+    } @else {
+      padding: rem(30) rem(66);
+    }
+  }
+  @include breakpoints(xxl) {
+    @if ($x == 0) {
+      padding: 0 rem(281);
+    } @else {
+      padding: rem(30) rem(281);
+    }
+  }
+}
