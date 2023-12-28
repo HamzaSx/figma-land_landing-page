@@ -1,0 +1,144 @@
+@use "../abstracts" as *;
+
+.home {
+  min-height: 100vh;
+  text-align: center;
+
+  &__headline {
+    text-wrap: nowrap;
+    br:nth-child(2) {
+      display: none;
+    }
+    @include breakpoints(sm) {
+      br:nth-child(1),
+      br:nth-child(3) {
+        display: none;
+      }
+
+      br:nth-child(2) {
+        display: inline;
+      }
+    }
+
+    @include Padding(0);
+  }
+
+  &__sub-headline {
+    margin-top: rem(27);
+
+    .break {
+      display: none;
+    }
+    @include breakpoints(md) {
+      br {
+        display: none;
+      }
+
+      .break {
+        display: inline;
+      }
+    }
+
+    @include breakpoints(md) {
+      margin-top: rem(37);
+    }
+
+    @include Padding(0);
+  }
+
+  &__btn-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-block: rem(67) rem(67);
+    gap: rem(21);
+
+    @include breakpoints(sm) {
+      flex-direction: row;
+      justify-content: center;
+      margin-top: rem(95);
+      gap: rem(35);
+    }
+
+    .btn {
+      padding: rem(20) rem(40);
+      color: var(--text-light);
+      width: fit-content;
+    }
+
+    .btn-1 {
+      background-color: var(--bg-btn1);
+      border: 1px solid var(--bg-btn1);
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    .btn-2 {
+      border: 1px solid var(--bg-btn2);
+
+      &:hover {
+        background-color: var(--bg-btn2);
+        color: var(--text-dark);
+      }
+    }
+
+    @include Padding(0);
+  }
+  &__img-container {
+    width: 100%;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-image: linear-gradient(to top, black -13%, transparent);
+
+      @include breakpoints(sm) {
+        margin-top: rem(25);
+      }
+
+      @include breakpoints(md) {
+        margin-top: rem(50);
+      }
+
+      @include breakpoints(xl) {
+        margin-top: rem(100);
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .img2 {
+      display: none;
+      max-width: rem(1552);
+    }
+
+    @include breakpoints(sm) {
+      .img1 {
+        display: none;
+      }
+
+      .img2 {
+        display: block;
+      }
+
+      margin-bottom: rem(25);
+    }
+
+    @include breakpoints(md) {
+      margin-bottom: rem(50);
+    }
+
+    @include breakpoints(xl) {
+      margin-bottom: rem(100);
+    }
+  }
+}
