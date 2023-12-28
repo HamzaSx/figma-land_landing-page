@@ -28,6 +28,7 @@ a,
   height: fit-content;
   text-decoration: none;
   color: var(--text-light);
+  font-weight: bold;
 }
 
 ul {
@@ -38,9 +39,15 @@ button {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  font-weight: bold;
 }
 
 main {
   width: 100%;
   min-height: 100vh;
+  margin-top: rem(67);
+
+  @include breakpoints(md) {
+    margin-top: rem(95);
+  }
 }

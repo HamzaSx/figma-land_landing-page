@@ -114,13 +114,13 @@
     display: none;
     flex-grow: 0.2;
 
+    @include breakpoints(md) {
+      display: flex;
+    }
+
     ul {
       display: flex;
       gap: rem(15);
-
-      @include breakpoints(md) {
-        display: block;
-      }
 
       a,
       :any-link {
