@@ -47,7 +47,7 @@ main {
   min-height: 100vh;
   margin-top: rem(67);
 
-  @include breakpoints(md) {
+  @include breakpoints(xxl) {
     margin-top: rem(95);
   }
 }
