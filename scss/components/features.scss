@@ -4,7 +4,9 @@
   min-height: 100vh;
   text-align: center;
 
-  @include Padding;
+  @include Padding(0);
+
+  padding-block: rem(163) rem(62);
 
   &__headline {
     margin: 0 auto;
@@ -14,6 +16,10 @@
     width: fit-content;
     margin: 0 auto;
     padding-block: rem(27);
+
+    @include breakpoints(lg) {
+      padding-bottom: rem(80);
+    }
   }
 
   &__flex {
